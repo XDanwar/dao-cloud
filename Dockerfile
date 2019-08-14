@@ -1,7 +1,6 @@
 FROM maven:3.3.3
-WORKDIR /project
 ADD . /project
-
+WORKDIR /project
 RUN mvn package -Dmaven.test.skip=true
 CMD ["mvn"]
 COPY /project/target/dao-cloud-0.0.1-SNAPSHOT.jar /usr/src/myapp/dao-cloud-0.0.1-SNAPSHOT.jar
