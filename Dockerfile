@@ -1,5 +1,4 @@
 FROM maven:3.3.3
-
 WORKDIR /project
 ADD . /project
 
